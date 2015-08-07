@@ -6,5 +6,8 @@ class CreateEasyRolesUserRoleGroups < ActiveRecord::Migration
       t.integer :group_id
       t.timestamps null: false
     end
+    add_index :easy_roles_user_role_groups, :user_id
+    add_index :easy_roles_user_role_groups, :role_id
+    add_index :easy_roles_user_role_groups, :group_id
   end
 end
