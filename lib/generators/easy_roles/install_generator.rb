@@ -1,7 +1,7 @@
 require 'rails/generators/base'
 
-module EasyRoles
-  module Generators
+#module Generators
+  module EasyRoles
     class InstallGenerator < Rails::Generators::Base
 
       desc 'change User model\'s base class to engine\'s User model'
@@ -11,4 +11,4 @@ module EasyRoles
 
     end
   end
-end
+#end
