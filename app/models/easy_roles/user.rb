@@ -14,8 +14,8 @@ module EasyRoles
         true
       else
         group_id ||= Group.first.try(:id)
-        raise EasyRoles::CustomExceptions::GroupNotFound unless group_id
-        eligible_actions_by_group(group_id).pluck(:controller, :action).include?([controller, action])        
+        raise EasyRoles::GroupNotFound unless group_id
+        eligible_actions_by_group(group_id).pluck(:controller, :action).include?([controller, action])
       end
     end
 
