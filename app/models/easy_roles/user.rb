@@ -15,7 +15,13 @@ module EasyRoles
       else
         group_id ||= Group.first.try(:id)
         raise EasyRoles::GroupNotFound unless group_id
-        eligible_actions_by_group(group_id).pluck(:controller, :action).include?([controller, action])
+        actions(group_id).pluck(:controller, :action).include?([controller, action])
+        # if group_id
+        #   eligible_actions_by_group(group_id).pluck(:controller, :action).include?([controller, action])
+        # else
+        #   eligible_actions.pluck(:controller, :action).include?([controller, action])
+        # end
+
       end
     end
 
@@ -26,8 +32,16 @@ module EasyRoles
 
     protected
 
+    def actions(group_id)
+      group_id.nil? ? eligible_actions : eligible_actions_by_group(group_id)
+    end
+
     def eligible_actions_by_group(group_id)
       sub_permissions.where('user_role_groups.group_id = ?', group_id)
+    end
+
+    def eligible_actions
+      sub_permissions
     end
   end
 end
