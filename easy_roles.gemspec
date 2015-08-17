@@ -14,8 +14,12 @@ Gem::Specification.new do |s|
   s.description = 'TODO: Description of EasyRoles.'
   s.license     = 'MIT'
 
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files      = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails', '~> 4.2.0'
+  s.add_dependency 'slim', '3.0.2'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'turbolinks'
+  s.add_dependency 'jquery-turbolinks'
 end

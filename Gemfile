@@ -12,5 +12,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
-gem 'slim', '3.0.2'
