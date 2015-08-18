@@ -1,1 +1,13 @@
-| Index
+= render 'menu_bar'
+
+table.table.table-bordered.table-striped
+  thead
+    th Name
+
+  tbody
+    - @roles.each do |role|
+      tr
+        td = link_to(role.name, edit_role_path(role))
+
+= render 'menu_bar'
+= paginate @roles

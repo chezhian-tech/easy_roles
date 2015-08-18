@@ -24,5 +24,9 @@ module EasyRoles
       end
     end
 
+    def copy_easy_roles_migrations
+      rake 'easy_roles:install:migrations'
+    end
+
   end
 end

@@ -19,7 +19,14 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.2.0'
   s.add_dependency 'slim-rails'
+  s.add_dependency 'kaminari'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'turbolinks'
   s.add_dependency 'jquery-turbolinks'
+  s.add_dependency 'less-rails'
+  s.add_dependency 'twitter-bootstrap-rails'
+  s.add_dependency 'coffee-rails', '~> 4.1.0'
+  s.add_dependency 'sass-rails', '~> 5.0'
+  s.add_dependency 'bootstrap-sass', '~> 3.2.0'
+  s.add_dependency 'autoprefixer-rails'
 end

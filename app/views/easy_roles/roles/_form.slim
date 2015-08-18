@@ -1,0 +1,12 @@
+.row
+  .col-lg-6
+
+    = form_for(@role, { class: '' }) do |r|
+
+      = render partial: 'easy_roles/shared/form_validation_message', locals: { obj: @role }
+
+      .form-group
+        label Name
+        = r.text_field(:name, { class: 'form-control' })
+
+      = r.submit({ class: 'btn btn-info' })
