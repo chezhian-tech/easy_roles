@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails', '~> 4.2.0'
-  s.add_dependency 'slim', '3.0.2'
+  s.add_dependency 'slim-rails'
   s.add_dependency 'jquery-rails'
   s.add_dependency 'turbolinks'
   s.add_dependency 'jquery-turbolinks'

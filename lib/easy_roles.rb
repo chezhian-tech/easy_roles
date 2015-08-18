@@ -1,4 +1,5 @@
-require "easy_roles/engine"
+require 'easy_roles/engine'
+require 'slim'
 
 module EasyRoles
 end
