@@ -1,0 +1,13 @@
+= render 'menu_bar'
+
+table.table.table-bordered.table-striped
+  thead
+    th Name
+
+  tbody
+    - @permissions.each do |permission|
+      tr
+        td = link_to(permission.name, edit_permission_path(permission))
+
+= render 'menu_bar'
+= paginate @permissions

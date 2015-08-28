@@ -11,6 +11,10 @@ module EasyRoles
       @role = Role.new
     end
 
+    def show
+      @role = Role.find(params[:id])
+    end
+
     def create
       @role = Role.new(role_params)
       if @role.save
